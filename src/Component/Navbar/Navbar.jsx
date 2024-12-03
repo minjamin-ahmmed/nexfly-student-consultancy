@@ -1,9 +1,17 @@
 import { MdOutlineArrowOutward } from "react-icons/md";
 import logo from "../../assets/Color Logo.png"
+import { NavLink } from "react-router-dom";
+import bannerBG from "../../assets/background-gradiant.png"
 
 const Navbar = () => {
+
     return (
-        <div className="navbar bg-base-100 w-11/12 mx-auto">
+        <div style={{
+            backgroundImage: `url(${bannerBG})`,
+            backgroundPosition: "top",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover"
+        }} className="navbar px-5 md:px-10 lg:px-20">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -23,8 +31,8 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <li><a>Home</a></li>
-                        <li><a>About Us</a></li>
+                        <li><NavLink to="/"> Home </NavLink></li>
+                        <li><NavLink to="/aboutUs"> About Us </NavLink></li>
                         <li>
                             <a>Destination</a>
                             {/* <ul className="p-2">
@@ -41,7 +49,7 @@ const Navbar = () => {
                             </ul> */}
                         </li>
 
-                        <li><a>Contact Us</a></li>
+                        <li><NavLink to="/contactUs"> Contact Us </NavLink></li>
                     </ul>
                 </div>
                 <div>
@@ -50,8 +58,8 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
-                    <li><a>About Us</a></li>
+                    <li><NavLink to="/"> Home </NavLink></li>
+                    <li> <NavLink to="/aboutUs"> About Us </NavLink></li>
                     <li>
                         <a>Destination</a>
                         {/* <ul className="p-2">
@@ -68,13 +76,13 @@ const Navbar = () => {
                         </ul> */}
                     </li>
 
-                    <li><a>Contact Us</a></li>
+                    <li><NavLink to="/contactUs"> Contact Us </NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end gap-5">
                 <button>Register Now</button>
                 <div className="flex items-center justify-between lg:gap-4 border border-indigo-500 font-semibold pl-5 pr-1 py-1 rounded-[100px]">
-                    <a className="text-indigo-500 text-md lg:text-lg">Sign in </a>
+                    <button className="text-indigo-500 text-md lg:text-lg">Sign in </button>
                     <p className="bg-indigo-500 p-2 rounded-full"> <MdOutlineArrowOutward className="text-white" /> </p>
                 </div>
             </div>
