@@ -6,8 +6,18 @@
   background-size: cover;
 }
 
+.banner-style2 {
+  background-image: url("../assets/background-gradiant.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .advantage-container {
   clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0 100%);
+}
+
+.footer-container {
+  clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0 100%);
 }
 
 @media screen and (max-width: 576px) {

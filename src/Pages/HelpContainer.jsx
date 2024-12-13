@@ -1,114 +1,134 @@
-import helpImg from "../assets/red-tshirt-women.png"
+import helpImg from "../assets/red-tshirt-women.png";
+
 function HelpContainer() {
     return (
-        <div className="px-5 md:px-10 lg:px-20 mt-20">
+        <div className="px-5 md:px-10 lg:px-20 py-5 md:py-10 lg:py-20">
+
             <div className="mb-10">
                 <h1 className="font-Poppins font-medium text-2xl md:text-3xl lg:text-4xl mb-4">Nexfly can help you</h1>
-                <p className="font-Manrope text-md lg:text-lg text-[#334155]">Provide your details, and our expert counselors will reach out to connect you with the ideal course, country, university, and scholarship opportunities!</p>
+                <p className="font-Manrope text-md lg:text-lg text-[#334155] lg:w-1/2">
+                    Provide your details, and our expert counselors will reach out to connect you with the ideal course,
+                    country, university, and scholarship opportunities!
+                </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 lg:gap-5 mb-10">
-                <div className="w-full">
-                    <img className="bg-[#C7D2FE] rounded-2xl w-full lg:w-[600px] " src={helpImg} alt="" />
+
+            <div className="flex flex-col lg:flex-row items-stretch gap-4 mb-10">
+
+                <div className="lg:w-1/2 flex items-center">
+                    <img
+                        className="bg-[#C7D2FE] rounded-2xl w-full lg:h-[450px] h-full object-contain"
+                        src={helpImg}
+                        alt="Help image"
+                    />
                 </div>
 
-                <div className="">
-                    <form className="card-body px-0 py-4 font-Manrope space-y-6">
-                        <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between gap-5">
-                            <div className="form-control w-full">
 
-                                <input type="text" placeholder="First Name" className="input input-bordered" required />
-                            </div>
+                <div className="lg:w-1/2 flex items-center rounded-2xl">
+                    <form className="w-full font-Manrope space-y-8">
 
-                            <div className="form-control w-full">
-
-                                <input type="text" placeholder="Last Name" className="input input-bordered" required />
-                            </div>
-                        </div>
-
-                        <div className="form-control w-full">
-
-                            <input type="email" placeholder="Email Address" className="input input-bordered" required />
-                        </div>
-
-                        <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between gap-5">
-                            <div className="form-control w-full">
-
-                                <input type="text" placeholder="Your Mobile Number" className="input input-bordered" required />
-                            </div>
-
-                            <div className="form-control w-full">
-
-                                <input type="text" placeholder="Parent Mobile Number" className="input input-bordered" required />
-                            </div>
-                        </div>
-
-                        <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between gap-5">
-                            <div className="form-control w-full">
-
-                                <input type="text" placeholder="When do you plan to study" className="input input-bordered" list="study-plan" required />
-                                <datalist id="study-plan">
-                                    <option>England</option>
-                                    <option>Australia</option>
-                                    <option>Canada</option>
-                                </datalist>
-
-
-                            </div>
-
-                            <div className="form-control w-full">
-
-                                <input type="text" placeholder="How would you fund your education" className="input input-bordered" list="study-plan" required />
-                                <datalist id="study-plan">
-                                    <option>England</option>
-                                    <option>Australia</option>
-                                    <option>Canada</option>
-                                </datalist>
-
-
-                            </div>
-                        </div>
-
-                        <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between gap-5">
-                            <div className="form-control w-full">
-
-                                <input type="text" placeholder="Preferred Study level" className="input input-bordered" list="study-plan" required />
-                                <datalist id="study-plan">
-                                    <option>England</option>
-                                    <option>Australia</option>
-                                    <option>Canada</option>
-                                </datalist>
-
-
-                            </div>
-
-                            <div className="form-control w-full">
-
-                                <input type="text" placeholder="Your Location" className="input input-bordered" list="study-plan" required />
-                                <datalist id="study-plan">
-                                    <option>England</option>
-                                    <option>Australia</option>
-                                    <option>Canada</option>
-                                </datalist>
-
-
-                            </div>
+                        <div className="flex flex-col md:flex-row items-center gap-4">
+                            <input
+                                type="text"
+                                placeholder="First Name"
+                                className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
+                                required
+                            />
+                            <input
+                                type="text"
+                                placeholder="Last Name"
+                                className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
+                                required
+                            />
                         </div>
 
 
+                        <input
+                            type="email"
+                            placeholder="Email Address"
+                            className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
+                            required
+                        />
 
 
+                        <div className="flex flex-col md:flex-row items-center gap-4">
+                            <input
+                                type="text"
+                                placeholder="Your Mobile Number"
+                                className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
+                                required
+                            />
+                            <input
+                                type="text"
+                                placeholder="Parent Mobile Number"
+                                className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
+                                required
+                            />
+                        </div>
 
-                        <div className="form-control mt-6 w-1/3 lg:w-1/6">
-                            <button className="btn bg-indigo-500 rounded-[100px] text-white">Enquire</button>
+
+                        <div className="flex flex-col md:flex-row items-center gap-4">
+                            <input
+                                type="text"
+                                placeholder="When do you plan to study"
+                                className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
+                                list="study-plan"
+                                required
+                            />
+                            <datalist id="study-plan">
+                                <option>2024</option>
+                                <option>2025</option>
+                                <option>Later</option>
+                            </datalist>
+
+                            <input
+                                type="text"
+                                placeholder="How would you fund your education"
+                                className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
+                                list="funding-options"
+                                required
+                            />
+                            <datalist id="funding-options">
+                                <option>Self-funded</option>
+                                <option>Scholarship</option>
+                                <option>Loan</option>
+                            </datalist>
+                        </div>
+
+
+                        <div className="flex flex-col md:flex-row items-center gap-4">
+                            <input
+                                type="text"
+                                placeholder="Preferred Study Level"
+                                className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
+                                list="study-level"
+                                required
+                            />
+                            <datalist id="study-level">
+                                <option>Bachelor&apos;s</option>
+                                <option>Master&apos;s</option>
+                                <option>PhD</option>
+                            </datalist>
+
+                            <input
+                                type="text"
+                                placeholder="Your Location"
+                                className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
+                                required
+                            />
+                        </div>
+
+
+                        <div className="form-control mt-6">
+                            <button className="btn bg-indigo-500 hover:bg-indigo-700 font-bold rounded-full text-white px-6 py-2 lg:w-1/4">
+                                Enquire
+                            </button>
                         </div>
                     </form>
                 </div>
             </div>
-
-
         </div>
-    )
+    );
 }
 
-export default HelpContainer
+export default HelpContainer;

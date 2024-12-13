@@ -1,9 +1,16 @@
+import OurTeam from "../../Pages/AboutUs/OurTeam";
+import Vission from "../../Pages/AboutUs/Vission";
+import HelpContainer from "../../Pages/HelpContainer";
 
 
 const AboutUs = () => {
     return (
         <div>
-            <h1>About Us Component</h1>
+            <div>
+                <Vission></Vission>
+                <OurTeam></OurTeam>
+                <HelpContainer></HelpContainer>
+            </div>
         </div>
     );
 };

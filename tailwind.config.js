@@ -4,13 +4,12 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        Poppins: ["Poppins", "sans-serif"],
-        Manrope: ["Manrope", "sans-serif"],
-      },
-
-      "bg-clip-Path": {
-        bottom: ["polygon(0 0, 100% 0, 100% 90%, 0, 100%)"],
+      // fontFamily: {
+      //   Poppins: ["Poppins", "sans-serif"],
+      //   Manrope: ["Manrope", "sans-serif"],
+      // },
+      backgroundImage: {
+        navbar: "url('/src/assets/background-gradiant.png')", // Ensure this path is correct.
       },
     },
   },
