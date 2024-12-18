@@ -7,25 +7,30 @@ import Step5 from "../../Pages/SelfAssesment/Step5";
 
 const SelfAssesment = () => {
     const [step, setStep] = useState(1);
-
+    const [completedSteps, setCompletedSteps] = useState([]);
 
     const goNextStep = () => {
         if (step < 5) {
-            setStep((prevStep) => prevStep + 1);
-        }
+            setStep((prevStep) => {
+                const nextStep = prevStep + 1;
 
-    }
+                // Mark the current step as completed
+                if (!completedSteps.includes(prevStep)) {
+                    setCompletedSteps((prev) => [...prev, prevStep]);
+                }
+
+                return nextStep;
+            });
+        }
+    };
 
     const goPrevStep = () => {
-        setStep((prevStep) => prevStep - 1)
-    }
-
+        setStep((prevStep) => prevStep - 1);
+    };
 
     const handleTabChange = (newStep) => {
         setStep(newStep);
     };
-
-
 
     return (
         <div className="px-5 md:px-10 lg:px-24 mt-8">
@@ -37,24 +42,22 @@ const SelfAssesment = () => {
                         key={tab}
                         role="tab"
                         onClick={() => handleTabChange(tab)}
-                        className={`relative z-10 px-4 py-2 text-center focus:outline-none ${step >= tab ? "text-indigo-500 font-medium" : "text-slate-700"
-                            }`}
+                        className={`relative z-10 px-4 py-2 text-center focus:outline-none ${
+                            completedSteps.includes(tab) || step === tab
+                                ? "text-indigo-500 font-medium"
+                                : "text-slate-700"
+                        }`}
                         aria-label={`Step ${tab}`}
                     >
-
-                        {
-                            step >= tab && (<i className="fa-regular fa-circle-check mr-2"></i>)
-                        }
+                        {completedSteps.includes(tab) && (
+                            <i className="fa-regular fa-circle-check mr-2"></i>
+                        )}
                         Step {tab}
-
                     </button>
                 ))}
 
                 {/* Dynamic Border */}
-                <div
-                    className="absolute bottom-0 left-0 h-[3px] bg-gray-300 w-full"
-
-                />
+                <div className="absolute bottom-0 left-0 h-[3px] bg-gray-300 w-full" />
                 <div
                     className="absolute bottom-0 left-0 h-[3px] bg-indigo-500 transition-all duration-300"
                     style={{

@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
 import Advantages from "../Pages/Advantages";
 import Advice from "../Pages/Advice";
@@ -13,6 +12,8 @@ import Video from "../Pages/Video";
 import modalImg from "../assets/modalImage.png";
 import modalLogo from "../assets/Color Logo.png";
 import cross from "../assets/clear.svg";
+import { useEffect } from "react";
+import { useState } from "react";
 
 
 Modal.setAppElement("#root");

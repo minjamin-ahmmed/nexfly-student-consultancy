@@ -12,6 +12,15 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.banner-style-refer {
+  clip-path: polygon(0% 0, 100% 0%, 100% 80%, 0 100%);
+  background-image: url("../assets/blue-gradiant.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .advantage-container {
   clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0 100%);
 }
