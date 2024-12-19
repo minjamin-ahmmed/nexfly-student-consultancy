@@ -1,8 +1,13 @@
 import { MdOutlineArrowOutward } from "react-icons/md";
 import logo from "../../assets/Color Logo.png";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import useStore from "../../store/store";
 
 const Navbar = () => {
+  const currentUser = useStore((state) => state.currentUser); // Read-only access to Zustand state
+  const logoutUser = useStore((state) => state.logoutUser);
+  const users = useStore((state) => state.users);
+
   const location = useLocation();
 
   const navbarBgColor =
@@ -135,29 +140,48 @@ const Navbar = () => {
           <li>
             <NavLink to="/contactUs"> Contact Us </NavLink>
           </li>
+
+          <li>Total Users: {users.length} </li>
         </ul>
       </div>
       <div className="navbar-end gap-2 flex flex-wrap justify-end items-center">
-        {/* Sign Up Button */}
-        <Link to="/auth/signup">
-          {" "}
-          <button className="bg-transparent border border-indigo-500 px-3 py-1 text-sm rounded-full lg:px-5 lg:py-2 lg:text-md">
-            Sign Up
-          </button>
-        </Link>
+        {currentUser ? (
+          <div className="flex items-center gap-4">
+            {/* Display user info */}
+            <span className="text-indigo-500 text-sm lg:text-md font-bold">
+              {currentUser.name}
+            </span>
 
-        {/* Sign In Button */}
-        <Link to="/auth/signin">
-          {" "}
-          <div className="flex items-center justify-between gap-2 border border-indigo-500 pl-5 pr-1 py-1 rounded-full lg:gap-4 ">
-            <button className="text-indigo-500 text-sm lg:text-md">
-              Sign In
+            {/* Logout Button */}
+            <button
+              onClick={() => logoutUser()}
+              className="bg-white text-indigo-500 font-bold px-4 py-1 text-sm rounded-full lg:px-5 lg:py-2 lg:text-md hover:bg-indigo-500 hover:text-white border border-indigo-500"
+            >
+              Logout
             </button>
-            <p className="bg-indigo-500 p-1 rounded-full lg:p-2">
-              <MdOutlineArrowOutward className="text-white" />
-            </p>
           </div>
-        </Link>
+        ) : (
+          <>
+            {/* Sign Up Button */}
+            <Link to="/auth/signup">
+              <button className="bg-transparent border border-indigo-500 px-3 py-1 text-sm rounded-full lg:px-5 lg:py-2 lg:text-md">
+                Sign Up
+              </button>
+            </Link>
+
+            {/* Sign In Button */}
+            <Link to="/auth/signin">
+              <div className="flex items-center justify-between gap-2 border border-indigo-500 pl-5 pr-1 py-1 rounded-full lg:gap-4">
+                <button className="text-indigo-500 text-sm lg:text-md">
+                  Sign In
+                </button>
+                <p className="bg-indigo-500 p-1 rounded-full lg:p-2">
+                  <MdOutlineArrowOutward className="text-white" />
+                </p>
+              </div>
+            </Link>
+          </>
+        )}
       </div>
     </div>
   );

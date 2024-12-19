@@ -6,12 +6,13 @@ import { motion } from "framer-motion";
 
 const Banner = () => {
   return (
-    <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between max-h-screen py-10 md:py-12 lg:py-20  px-5 md:px-10 lg:px-20 banner-style">
+    <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between lg:gap-64 max-h-screen py-10 md:py-12 lg:py-20  px-5 md:px-10 lg:px-20 banner-style">
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 2, ease: "easeOut" }}
         viewport={{ once: true }}
+        className="lg:w-1/2"
       >
         {/* <h1 className="font-Poppins text-2xl lg:text-5xl md:text-3xl font-normal text-[#18181B] mb-6"> <ReactRotatingText items={["Turn your study abroad dreams into reality with Nexfly.", "Make your study abroad dreams come true with Nexfly.", "Bring your dream of studying abroad to life with Nexfly."]}></ReactRotatingText> </h1> */}
 
@@ -33,8 +34,9 @@ const Banner = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 2, ease: "easeOut" }}
         viewport={{ once: true }}
+        className="lg:w-1/2"
       >
-        <img src={bannerImg} alt="" />
+        <img className="lg:" src={bannerImg} alt="" />
       </motion.div>
     </div>
   );

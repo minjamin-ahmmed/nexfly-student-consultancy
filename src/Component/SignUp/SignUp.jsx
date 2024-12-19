@@ -7,9 +7,17 @@ import { IoEye, IoEyeOffSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import Swal from "sweetalert2";
+import useStore from "../../store/store";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [showPasswordConfirm, setShowPasswordConfirm] = useState(false);
+
+  const registerUser = useStore((state) => state.registerUser);
+
+  const API_URL = import.meta.env.VITE_API_URL_Register;
 
   const {
     register,
@@ -19,7 +27,7 @@ const SignUp = () => {
     setError,
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     if (data.password !== data.confirmPassword) {
       setError("confirmPassword", {
         type: "manual",
@@ -29,6 +37,37 @@ const SignUp = () => {
     }
 
     console.log("Form Submitted Successfully:", data);
+
+    try {
+      const response = await axios.post(`${API_URL}/auth/register`, {
+        role: "2",
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        password: data.password,
+        password_confirmation: data.confirmPassword,
+      });
+
+      console.log(response.data);
+      registerUser(data);
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        },
+      });
+      Toast.fire({
+        icon: "success",
+        title: "Successfully Registered",
+      });
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
   return (
@@ -83,16 +122,16 @@ const SignUp = () => {
               <input
                 {...register("number", {
                   required: "Phone number is required",
-                  minLength: {
-                    value: 11,
-                    message: "Phone Number must be 11 character",
-                  },
                   pattern: {
                     value: /^[0-9]+$/,
                     message: "Enter a valid phone number",
                   },
+                  minLength: {
+                    value: 11,
+                    message: "Phone Number must be 11 character",
+                  },
                 })}
-                type="text"
+                type="number"
                 placeholder="Phone Number"
                 className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
               />
@@ -133,16 +172,16 @@ const SignUp = () => {
                 {...register("confirmPassword", {
                   required: "Confirm Password is required",
                 })}
-                type={showPassword ? "text" : "password"}
+                type={showPasswordConfirm ? "text" : "password"}
                 placeholder="Confirm Password"
                 className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
               />
               <button
                 type="button"
-                onClick={() => setShowPassword(!showPassword)}
+                onClick={() => setShowPasswordConfirm(!showPasswordConfirm)}
                 className="absolute top-4 right-4"
               >
-                {showPassword ? <IoEye /> : <IoEyeOffSharp />}
+                {showPasswordConfirm ? <IoEye /> : <IoEyeOffSharp />}
               </button>
               {errors.confirmPassword && (
                 <p className="text-red-500 text-sm">

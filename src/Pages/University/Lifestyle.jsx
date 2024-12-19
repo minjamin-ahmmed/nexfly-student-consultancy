@@ -15,7 +15,7 @@ const Lifestyle = () => {
         journey smooth and successful.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mt-10">
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-8 mt-10">
         <div className="space-y-3">
           <div>
             <img src={icon1} alt="" />

@@ -103,7 +103,7 @@ const Reason = () => {
           {benifits.map((benifit, index) => (
             <div key={index} className="space-y-4">
               <div>
-                <img src={benifit.image} alt="" />
+                <img className="w-full" src={benifit.image} alt="" />
               </div>
               <h1 className="text-xl font-medium text-slate-900">
                 {" "}
