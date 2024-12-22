@@ -101,7 +101,7 @@ const DiscoverUniversities = () => {
       <div className="relative mt-10 ">
         <Slider {...settings}>
           {universities.map((uni, index) => (
-            <div key={index} className="shadow-xl p-4">
+            <div key={index} className="p-4">
               <div className="mb-4">
                 <img className="w-full" src={uni.image} alt={uni.name} />
               </div>

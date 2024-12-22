@@ -11,6 +11,7 @@ import EnquireResult from "../Component/EnquireResult/EnquireResult";
 import Refer from "../Component/Refer/Refer";
 import Partner from "../Component/Partner/Partner";
 import University from "../Component/University/University";
+import UserProfile from "../Component/UserProfile/UserProfile";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "/discover-universities",
         element: <University></University>,
+      },
+      {
+        path: "/userProfile",
+        element: <UserProfile></UserProfile>,
       },
     ],
   },

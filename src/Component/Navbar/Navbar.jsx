@@ -18,7 +18,8 @@ const Navbar = () => {
     (location.pathname === "/contactUs") |
     (location.pathname === "/refer") |
     (location.pathname === "/became-partner") |
-    (location.pathname === "/discover-universities")
+    (location.pathname === "/discover-universities") |
+    (location.pathname === "/userProfile")
       ? "bg-none"
       : "bg-[url('/src/assets/background-gradiant.png')] bg-no-repeat bg-cover bg-top";
 
