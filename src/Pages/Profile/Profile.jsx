@@ -38,7 +38,7 @@ const Profile = () => {
         </div>
         <div>
           <p className="text-slate-900 font-normal text-lg mb-1">
-            {currentUser.name}
+            {`${currentUser?.name ? currentUser?.name : "John Doe"}`}
           </p>
           <p className="text-slate-600 text-[14px]">Dhaka, Bangladesh 1207</p>
         </div>

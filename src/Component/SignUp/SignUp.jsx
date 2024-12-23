@@ -1,8 +1,8 @@
 import "../../Pages/banner.css";
 import signinImg from "../../assets/Rectangle 4084.png";
-import google from "../../assets/google.png";
-import facebook from "../../assets/Social icon.png";
-import apple from "../../assets/Social icon (1).png";
+import google from "../../assets/google.svg";
+import facebook from "../../assets/facebook.svg";
+import apple from "../../assets/apple.svg";
 import { IoEye, IoEyeOffSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -214,7 +214,7 @@ const SignUp = () => {
 
           <p className="font-medium text-sm text-zinc-900 text-center my-6">
             Already signed up?{" "}
-            <Link to="/auth/signin" className="text-indigo-500">
+            <Link to="/auth/signin" className="text-indigo-500 underline">
               Sign in
             </Link>
           </p>

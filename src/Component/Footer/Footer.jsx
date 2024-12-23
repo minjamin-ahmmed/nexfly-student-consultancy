@@ -3,7 +3,8 @@ import { FaFacebook, FaSkype } from "react-icons/fa";
 import { ImTwitter } from "react-icons/im";
 import whiteLogo from "../../assets/Mask group.png";
 import { Link } from "react-router-dom";
-
+import qrCode from "../../assets/QR_code_for_mobile_English_Wikipedia.svg";
+import smallQr from "../../assets/qr_code_scanner.svg";
 const Footer = () => {
   return (
     <footer className="bg-[#1E293B] text-white">
@@ -86,22 +87,32 @@ const Footer = () => {
           </a>
         </nav>
         <nav>
-          <h6 className=" text-white text-xl font-medium">My Account</h6>
+          <h6 className=" text-white text-xl font-medium">Popular Courses</h6>
           <a className="link link-hover font-light text-md text-[#CBD5E1]">
-            Press Inquiries
+            Course 1
           </a>
           <a className="link link-hover font-light text-md text-[#CBD5E1]">
-            Social Media Directories
+            Course 2
           </a>
           <a className="link link-hover font-light text-md text-[#CBD5E1]">
-            Images & B-roll
+            Course 3
           </a>
           <a className="link link-hover font-light text-md text-[#CBD5E1]">
-            Permissions
+            Course 4
           </a>
           <a className="link link-hover font-light text-md text-[#CBD5E1]">
-            Speaker Requests{" "}
+            Course 5
           </a>
+        </nav>
+
+        <nav className="bg-slate-700 p-4 rounded-xl">
+          <img className="bg-white rounded-xl w-40 h-40" src={qrCode} alt="" />
+          <div className="flex items-center justify-center gap-4">
+            <div>
+              <img src={smallQr} alt="" />
+            </div>
+            <p className="text-white font-medium text-lg">Scan Me</p>
+          </div>
         </nav>
       </div>
 

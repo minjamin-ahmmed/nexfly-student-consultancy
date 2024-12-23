@@ -2,7 +2,7 @@ import Modal from "react-modal";
 import bgImg from "../../assets/background-gradiant.png";
 import "../banner.css";
 import cross from "../../assets/clear.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../banner.css";
 import { motion } from "framer-motion";
 
@@ -10,19 +10,65 @@ const Banner = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedSchedule, setSelectedSchedule] = useState("");
   const [isSelected, setIsSelected] = useState("");
+  const [dates, setDates] = useState([]);
 
   const closeModal = () => {
     setIsModalOpen(false);
   };
 
+  useEffect(() => {
+    const generateDates = () => {
+      const dateList = [];
+      const today = new Date();
+      const dayNames = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      const monthNames = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+      ];
+
+      for (let i = 0; i < 5; i++) {
+        const futureDate = new Date(today);
+        futureDate.setDate(today.getDate() + i);
+
+        dateList.push({
+          day: dayNames[futureDate.getDay()],
+          month: monthNames[futureDate.getMonth()],
+          date: futureDate.getDate(),
+        });
+      }
+
+      setDates(dateList);
+    };
+
+    generateDates();
+  }, []);
+
   const schedules = ["10.00 AM", "12.00 AM", "2.00 PM", "4.00 PM", "5.00 PM"];
-  const dates = [
-    { day: "Monday", date: 10, month: "JAN" },
-    { day: "Wednesday", date: 12, month: "JAN" },
-    { day: "Sunday", date: 16, month: "JAN" },
-    { day: "Tuesday", date: 18, month: "JAN" },
-    { day: "Thursday", date: 11, month: "SEP" },
-  ];
+  // const dates = [
+  //   { day: "Monday", date: 10, month: "JAN" },
+  //   { day: "Wednesday", date: 12, month: "JAN" },
+  //   { day: "Sunday", date: 16, month: "JAN" },
+  //   { day: "Tuesday", date: 18, month: "JAN" },
+  //   { day: "Thursday", date: 11, month: "SEP" },
+  // ];
 
   //   const getCardStyle = (selected) => {
   //     return `rounded-2xl border px-2 py-2 ${

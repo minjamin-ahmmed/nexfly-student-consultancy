@@ -1,7 +1,7 @@
-import icon1 from "../assets/Icon1.png";
-import icon2 from "../assets/Icon2.png";
-import icon3 from "../assets/Icon3.png";
-import icon4 from "../assets/Icon4.png";
+import icon1 from "../assets/icon1.svg";
+import icon2 from "../assets/Icon2.svg";
+import icon3 from "../assets/icon3.svg";
+import icon4 from "../assets/Icon4.svg";
 import elementIcon from "../assets/elements.svg";
 
 import { motion } from "framer-motion";
@@ -27,7 +27,7 @@ const Services = () => {
             <img src={icon1} alt="" />
           </div>
           <h3 className="font-Poppins text-2xl font-medium mb-3">
-            Support with <br /> applications
+            Education Consaltant
           </h3>
           <p className="font-Manrope text-md text-[#64748B] mb-3">
             We provide exceptional support and resources to make your study
@@ -51,7 +51,7 @@ const Services = () => {
             <img src={icon2} alt="" />
           </div>
           <h3 className="font-Poppins text-2xl font-medium mb-3">
-            Student Admission Services
+            Travel Support
           </h3>
           <p className="font-Manrope text-md text-[#64748B] mb-3">
             We provide exceptional support and resources to make your study
@@ -75,8 +75,7 @@ const Services = () => {
             <img src={icon3} alt="" />
           </div>
           <h3 className="font-Poppins text-2xl font-medium mb-3">
-            Compliance <br />
-            Assistance
+            Financial Support
           </h3>
           <p className="font-Manrope text-md text-[#64748B] mb-3">
             We provide exceptional support and resources to make your study
@@ -100,7 +99,7 @@ const Services = () => {
             <img src={icon4} alt="" />
           </div>
           <h3 className="font-Poppins text-2xl font-medium mb-3">
-            Free Counselling for Student
+            Language Training
           </h3>
           <p className="font-Manrope text-md text-[#64748B] mb-3">
             We provide exceptional support and resources to make your study

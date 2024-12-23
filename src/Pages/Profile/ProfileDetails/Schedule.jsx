@@ -1,7 +1,7 @@
 import { Calendar03Icon, Time02Icon } from "hugeicons-react";
 import Modal from "react-modal";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import cross from "../../../assets/clear.svg";
 import Swal from "sweetalert2";
 
@@ -12,10 +12,54 @@ const Schedule = () => {
   const [mainTopic, setMainTopic] = useState("");
   const [question, setQuestion] = useState("");
   const [bookingHistory, setBookingHistory] = useState([]);
+  const [dates, setDates] = useState([]);
 
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
+  useEffect(() => {
+    const generateDates = () => {
+      const dateList = [];
+      const today = new Date();
+      const dayNames = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      const monthNames = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+      ];
+
+      for (let i = 0; i < 5; i++) {
+        const futureDate = new Date(today);
+        futureDate.setDate(today.getDate() + i);
+
+        dateList.push({
+          day: dayNames[futureDate.getDay()],
+          date: futureDate.getDate(),
+          month: monthNames[futureDate.getMonth()],
+        });
+      }
+      return dateList;
+    };
+    setDates(generateDates());
+  }, []);
 
   const confirmBooking = (e) => {
     e.preventDefault();
@@ -50,13 +94,13 @@ const Schedule = () => {
   };
 
   const schedules = ["10.00 AM", "12.00 AM", "2.00 PM", "4.00 PM", "5.00 PM"];
-  const dates = [
-    { day: "Monday", date: 10, month: "JAN" },
-    { day: "Wednesday", date: 12, month: "JAN" },
-    { day: "Sunday", date: 16, month: "JAN" },
-    { day: "Tuesday", date: 18, month: "JAN" },
-    { day: "Thursday", date: 11, month: "SEP" },
-  ];
+  // const dates = [
+  //   { day: "Monday", date: 10, month: "JAN" },
+  //   { day: "Wednesday", date: 12, month: "JAN" },
+  //   { day: "Sunday", date: 16, month: "JAN" },
+  //   { day: "Tuesday", date: 18, month: "JAN" },
+  //   { day: "Thursday", date: 11, month: "FEB" },
+  // ];
 
   const getOptionStyle = (option, selected) => {
     return `px-4 py-2 text rounded-[100px] cursor-pointer text-sm ${
@@ -197,7 +241,7 @@ const Schedule = () => {
 
               <div className="mb-6">
                 <h3 className="text-xl font-medium mb-4">
-                  Make Your Schedule!
+                  Book Your Schedule!
                 </h3>
                 <div className="flex flex-wrap lg:flex-nowrap items-center justify-between gap-2">
                   {schedules.map((schedule, index) => (

@@ -1,8 +1,10 @@
-import mailIcon from "../../assets/Email Icon.png";
-import adminIcon from "../../assets/Admin Icon.png";
-import cosultent from "../../assets/Free Consultant Icon.png";
-import hotline from "../../assets/Hotline Icon.png";
 import { motion } from "framer-motion";
+import {
+  CustomerServiceIcon,
+  HeadsetIcon,
+  Mail01Icon,
+  UserLove02Icon,
+} from "hugeicons-react";
 
 const Contact = () => {
   return (
@@ -26,7 +28,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           <div className="flex items-center gap-2 bg-indigo-100 px-4 py-2 rounded-xl">
             <div>
-              <img src={mailIcon} alt="" />
+              <Mail01Icon className="text-indigo-500" />
             </div>
 
             <p className="font-normal text-indigo-500 text-sm">
@@ -36,7 +38,7 @@ const Contact = () => {
 
           <div className="flex items-center gap-2 bg-indigo-100 px-4 py-2 rounded-xl">
             <div>
-              <img src={adminIcon} alt="" />
+              <UserLove02Icon className="text-indigo-500" />
             </div>
 
             <p className="font-normal text-indigo-500 text-sm">
@@ -46,7 +48,7 @@ const Contact = () => {
 
           <div className="flex items-center gap-2 bg-indigo-100 px-4 py-2 rounded-xl">
             <div>
-              <img src={cosultent} alt="" />
+              <HeadsetIcon className="text-indigo-500" />
             </div>
 
             <p className="font-normal text-indigo-500 text-sm">
@@ -56,7 +58,7 @@ const Contact = () => {
 
           <div className="flex items-center gap-2 bg-indigo-100 px-4 py-2 rounded-xl">
             <div>
-              <img src={hotline} alt="" />
+              <CustomerServiceIcon className="text-indigo-500" />
             </div>
 
             <p className="font-normal text-indigo-500 text-sm">

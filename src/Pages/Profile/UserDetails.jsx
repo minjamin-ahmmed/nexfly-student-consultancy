@@ -1,7 +1,9 @@
 import HelpCenter from "./ProfileDetails/HelpCenter";
+import Notification from "./ProfileDetails/Notification";
 import ProfileDetails from "./ProfileDetails/ProfileDetails";
 import ReferandEarn from "./ProfileDetails/ReferandEarn";
 import Schedule from "./ProfileDetails/Schedule";
+import Settings from "./ProfileDetails/Settings";
 import Transaction from "./ProfileDetails/Transaction";
 import UploadFiles from "./ProfileDetails/UploadFiles";
 
@@ -18,8 +20,8 @@ const UserDetails = ({ activeTab }) => {
     Schedule: <Schedule />,
     Files: <UploadFiles />,
     "Help Center": <HelpCenter />,
-    Notifications: <div>Notifications Details</div>,
-    Setting: <div>Settings Details</div>,
+    Notifications: <Notification />,
+    Setting: <Settings />,
   };
 
   return (

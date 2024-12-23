@@ -1,0 +1,29 @@
+<svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="32" height="33" fill="#1E1E1E"/>
+<g id="Contact Us" clip-path="url(#clip0_0_1)">
+<rect width="1440" height="2206" transform="translate(-1180 -2081)" fill="white"/>
+<g id="Footer">
+<g id="Section">
+<rect width="1440" height="298.39" transform="translate(-1180 -213)" fill="#1E293B"/>
+<g id="Frame 24">
+<rect x="-16" y="-171.805" width="176" height="216" rx="16" fill="#334155"/>
+<g id="Frame 23">
+<g id="qr_code_scanner">
+<mask id="mask0_0_1" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="33">
+<rect id="Bounding box" y="0.195312" width="32" height="32" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_0_1)">
+<path id="qr_code_scanner_2" d="M2.66602 9.52799V2.86133H9.33268V5.52799H5.33268V9.52799H2.66602ZM2.66602 29.528V22.8613H5.33268V26.8613H9.33268V29.528H2.66602ZM22.666 29.528V26.8613H26.666V22.8613H29.3327V29.528H22.666ZM26.666 9.52799V5.52799H22.666V2.86133H29.3327V9.52799H26.666ZM23.3327 23.528H25.3327V25.528H23.3327V23.528ZM23.3327 19.528H25.3327V21.528H23.3327V19.528ZM21.3327 21.528H23.3327V23.528H21.3327V21.528ZM19.3327 23.528H21.3327V25.528H19.3327V23.528ZM17.3327 21.528H19.3327V23.528H17.3327V21.528ZM21.3327 17.528H23.3327V19.528H21.3327V17.528ZM19.3327 19.528H21.3327V21.528H19.3327V19.528ZM17.3327 17.528H19.3327V19.528H17.3327V17.528ZM25.3327 6.86133V14.8613H17.3327V6.86133H25.3327ZM14.666 17.528V25.528H6.66602V17.528H14.666ZM14.666 6.86133V14.8613H6.66602V6.86133H14.666ZM12.666 23.528V19.528H8.66602V23.528H12.666ZM12.666 12.8613V8.86133H8.66602V12.8613H12.666ZM23.3327 12.8613V8.86133H19.3327V12.8613H23.3327Z" fill="#CBD5E0"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_1">
+<rect width="1440" height="2206" fill="white" transform="translate(-1180 -2081)"/>
+</clipPath>
+</defs>
+</svg>

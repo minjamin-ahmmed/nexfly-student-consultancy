@@ -10,7 +10,7 @@ const UploadFiles = () => {
 
       <h1 className="text-xl font-medium text-slate-900 mb-4">Identity</h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16">
-        <div>
+        <div className="bg-indigo-50 p-4 lg:p-6 rounded-2xl">
           <p className="text-slate-900 text-[16px]  font-semibold mb-4">
             Passport
           </p>
@@ -19,9 +19,9 @@ const UploadFiles = () => {
           </button>
         </div>
 
-        <div>
+        <div className="bg-indigo-50 p-4 lg:p-6 rounded-2xl">
           <p className="text-slate-900 text-[16px]  font-semibold mb-4">NID</p>
-          <button className="text-indigo-500 bg-white border border-indigo-500 font-semibold rounded-[100px] px-12 py-4 w-full">
+          <button className="text-indigo-500 bg-transparent border border-indigo-500 font-semibold rounded-[100px] px-12 py-4 w-full">
             Upload File
           </button>
         </div>
@@ -31,20 +31,20 @@ const UploadFiles = () => {
         Academic Certificate
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16">
-        <div>
+        <div className="bg-indigo-50 p-4 lg:p-6 rounded-2xl">
           <p className="text-slate-900 text-[16px] font-semibold mb-4">
             SSC Marksheet
           </p>
-          <button className="text-indigo-500 bg-white border border-indigo-500 font-semibold rounded-[100px] px-12 py-4 w-full">
+          <button className="text-indigo-500 bg-transparent border border-indigo-500 font-semibold rounded-[100px] px-12 py-4 w-full">
             Upload File
           </button>
         </div>
 
-        <div>
+        <div className="bg-indigo-50 p-4 lg:p-6 rounded-2xl">
           <p className="text-slate-900 text-[16px] font-semibold mb-4">
             HSC Marksheet
           </p>
-          <button className="text-indigo-500 bg-white border border-indigo-500 font-semibold rounded-[100px] px-12 py-4 w-full">
+          <button className="text-indigo-500 bg-transparent border border-indigo-500 font-semibold rounded-[100px] px-12 py-4 w-full">
             Upload File
           </button>
         </div>

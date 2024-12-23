@@ -31,9 +31,7 @@ const Navbar = () => {
   // }}
 
   return (
-    <div
-      className={`navbar px-5 md:px-10 lg:px-20 ${navbarBgColor} shadow-none`}
-    >
+    <div className={`navbar px-5 md:px-10 lg:px-20 ${navbarBgColor}`}>
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -150,13 +148,13 @@ const Navbar = () => {
           <div className="flex items-center gap-4">
             {/* Display user info */}
             <span className="text-indigo-500 text-sm lg:text-md font-bold">
-              {currentUser.name}
+              {currentUser?.name}
             </span>
 
             {/* Logout Button */}
             <button
               onClick={() => logoutUser()}
-              className="bg-white text-indigo-500 font-bold px-4 py-1 text-sm rounded-full lg:px-5 lg:py-2 lg:text-md hover:bg-indigo-500 hover:text-white border border-indigo-500"
+              className="bg-transparent text-indigo-500 font-bold px-4 py-1 text-sm rounded-full lg:px-5 lg:py-2 lg:text-md hover:bg-indigo-500 hover:text-white border border-indigo-500"
             >
               Logout
             </button>
