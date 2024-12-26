@@ -8,7 +8,7 @@ const Transaction = () => {
         opportunities!
       </p>
 
-      <div className="bg-white shadow rounded-lg overflow-x-auto">
+      <div className="bg-white shadow rounded-lg overflow-x-auto overflow-y-scroll mt-8">
         <div className="mb-4 p-4 flex flex-wrap items-center gap-2">
           <h2 className="text-lg text-slate-900 font-semibold">
             Transaction List

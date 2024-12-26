@@ -140,7 +140,7 @@ const Navbar = () => {
             <NavLink to="/contactUs"> Contact Us </NavLink>
           </li>
 
-          <li>Total Users: {users.length} </li>
+          {/* <li>Total Users: {users.length} </li> */}
         </ul>
       </div>
       <div className="navbar-end gap-2 flex flex-wrap justify-end items-center">

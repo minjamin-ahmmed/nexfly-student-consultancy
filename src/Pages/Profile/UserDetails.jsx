@@ -6,12 +6,13 @@ import Schedule from "./ProfileDetails/Schedule";
 import Settings from "./ProfileDetails/Settings";
 import Transaction from "./ProfileDetails/Transaction";
 import UploadFiles from "./ProfileDetails/UploadFiles";
+import EducationConsaltant from "./ProfileDetails/YourService/EducationConsaltant";
 
 const UserDetails = ({ activeTab }) => {
   const content = {
     Profile: <ProfileDetails />,
     "Your Service": <div>Your Service Details</div>,
-    "Education Consultant": <div>Education Consultant Details</div>,
+    "Education Consultant": <EducationConsaltant />,
     "Travel Support": <div>Travel Support Details</div>,
     "Financial Support": <div>Financial Support Details</div>,
     "Language Training": <div>Language Training Details</div>,

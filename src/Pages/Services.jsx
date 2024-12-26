@@ -5,6 +5,7 @@ import icon4 from "../assets/Icon4.svg";
 import elementIcon from "../assets/elements.svg";
 
 import { motion } from "framer-motion";
+import { ArrowRight01Icon } from "hugeicons-react";
 const Services = () => {
   return (
     <div className="px-5 md:px-10 lg:px-20 py-5 md:py-10 lg:pb-20">
@@ -37,7 +38,7 @@ const Services = () => {
             <a href="#" className="text-indigo-500 font-medium">
               Learn More
             </a>
-            <img src={elementIcon} alt="Element Icon" />
+            <ArrowRight01Icon className="text-indigo-500" />
           </div>
         </motion.div>
 
@@ -61,7 +62,7 @@ const Services = () => {
             <a href="#" className="text-indigo-500 font-medium">
               Learn More
             </a>
-            <img src={elementIcon} alt="Element Icon" />
+            <ArrowRight01Icon className="text-indigo-500" />
           </div>
         </motion.div>
 
@@ -85,7 +86,7 @@ const Services = () => {
             <a href="#" className="text-indigo-500 font-medium">
               Learn More
             </a>
-            <img src={elementIcon} alt="Element Icon" />
+            <ArrowRight01Icon className="text-indigo-500" />
           </div>
         </motion.div>
 
@@ -109,7 +110,7 @@ const Services = () => {
             <a href="#" className="text-indigo-500 font-medium">
               Learn More
             </a>
-            <img src={elementIcon} alt="Element Icon" />
+            <ArrowRight01Icon className="text-indigo-500" />
           </div>
         </motion.div>
       </div>

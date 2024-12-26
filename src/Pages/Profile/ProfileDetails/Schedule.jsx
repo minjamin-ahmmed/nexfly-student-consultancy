@@ -345,6 +345,69 @@ const Schedule = () => {
           </div>
         ))}
       </div>
+
+      <div className="bg-white shadow rounded-lg overflow-y-auto lg:h-[350px] overflow-x-auto mt-8">
+        <div className="mb-4 p-4 flex flex-wrap items-center gap-2">
+          <h2 className="text-lg text-slate-900 font-semibold">
+            Schedule History
+          </h2>
+          <p className="text-indigo-500 text-sm font-normal px-2 py-1 bg-indigo-50 rounded-3xl">
+            No. Schedule
+          </p>
+        </div>
+
+        <table className="w-full text-left border-collapse">
+          <thead className="bg-slate-200">
+            <tr className="text-xs lg:text-sm font-semibold text-gray-600 border-b">
+              <th className="py-4 px-6 text-center">SL</th>
+              <th className="py-4 px-6 text-center">Topic</th>
+              <th className="py-4 px-6 text-center">Date</th>
+              <th className="py-4 px-6 text-center">Time</th>
+              <th className="py-4 px-6 text-center">Meet Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="text-xs lg:text-sm text-slate-500 border-b">
+              <td className="py-4 px-6 text-center">1</td>
+              <td className="py-4 px-6 text-center">ABC Main Topic</td>
+              <td className="py-4 px-6 text-center">September 31, 2015</td>
+              <td className="py-4 px-6 text-center">12.03 PM</td>
+              <td className="py-4 px-6 text-center">NexFly Office</td>
+            </tr>
+
+            <tr className="text-xs lg:text-sm text-slate-500 border-b">
+              <td className="py-4 px-6 text-center">1</td>
+              <td className="py-4 px-6 text-center">ABC Main Topic</td>
+              <td className="py-4 px-6 text-center">September 31, 2015</td>
+              <td className="py-4 px-6 text-center">12.03 PM</td>
+              <td className="py-4 px-6 text-center">Online</td>
+            </tr>
+
+            <tr className="text-xs lg:text-sm text-slate-500 border-b">
+              <td className="py-4 px-6 text-center">1</td>
+              <td className="py-4 px-6 text-center">ABC Main Topic</td>
+              <td className="py-4 px-6 text-center">September 31, 2015</td>
+              <td className="py-4 px-6 text-center">12.03 PM</td>
+              <td className="py-4 px-6 text-center">NexFly Office</td>
+            </tr>
+
+            <tr className="text-xs lg:text-sm text-slate-500 border-b">
+              <td className="py-4 px-6 text-center">1</td>
+              <td className="py-4 px-6 text-center">ABC Main Topic</td>
+              <td className="py-4 px-6 text-center">September 31, 2015</td>
+              <td className="py-4 px-6 text-center">12.03 PM</td>
+              <td className="py-4 px-6 text-center">NexFly Office</td>
+            </tr>
+            <tr className="text-xs lg:text-sm text-slate-500 border-b">
+              <td className="py-4 px-6 text-center">1</td>
+              <td className="py-4 px-6 text-center">ABC Main Topic</td>
+              <td className="py-4 px-6 text-center">September 31, 2015</td>
+              <td className="py-4 px-6 text-center">12.03 PM</td>
+              <td className="py-4 px-6 text-center">NexFly Office</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

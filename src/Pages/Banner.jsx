@@ -36,7 +36,7 @@ const Banner = () => {
         viewport={{ once: true }}
         className="lg:w-1/2"
       >
-        <img className="lg:" src={bannerImg} alt="" />
+        <img src={bannerImg} alt="" />
       </motion.div>
     </div>
   );
