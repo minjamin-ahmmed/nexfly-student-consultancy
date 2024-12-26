@@ -72,9 +72,9 @@ const Location = () => {
           </p>
           <p className="text-slate-700 mb-4 text-lg">United States</p>
 
-          <button className="btn bg-indigo-500 hover:bg-indigo-700 font-bold rounded-full text-white px-6 py-2">
+          {/* <button className="btn bg-indigo-500 hover:bg-indigo-700 font-bold rounded-full text-white px-6 py-2">
             Explore
-          </button>
+          </button> */}
         </motion.div>
       </div>
     </div>

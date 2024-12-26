@@ -108,7 +108,7 @@ const LanguageTab = ({ handleNext, handlePrev }) => {
 
         <input
           type="number"
-          placeholder="Your IELTS Score"
+          placeholder="Your Score"
           className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium mb-8"
           required
         />

@@ -88,7 +88,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="max-h-screen py-10 md:py-12 lg:py-20  px-5 md:px-10 lg:px-20 banner-style2">
+    <div className="max-h-screen py-10 md:py-12 lg:py-20  px-5 md:px-10 lg:px-40 banner-style2">
       <div>
         <h1 className="font-Poppins text-2xl lg:text-5xl md:text-3xl font-normal text-[#18181B] mb-6">
           Your Enquire Result{" "}

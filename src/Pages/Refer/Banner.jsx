@@ -5,7 +5,7 @@ const Banner = () => {
   return (
     <div
       className="flex flex-col md:flex-row lg:flex-row items-center
-     gap-5 max-h-screen py-10 md:py-12 lg:py-20  px-5 md:px-10 lg:px-20 banner-style-refer"
+     gap-5 max-h-screen py-10 md:py-12 lg:py-20  px-5 md:px-10 lg:px-40 banner-style-refer"
     >
       <div className="lg:w-1/2">
         <h1 className="font-Poppins text-2xl lg:text-5xl md:text-3xl font-normal text-white mb-8">

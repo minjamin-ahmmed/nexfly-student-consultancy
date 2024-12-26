@@ -92,7 +92,7 @@ const TopUniversities = () => {
     ],
   };
   return (
-    <div className="px-5 md:px-10 lg:px-20 pt-32 pb-10 md:pb-10 md:pt-64 lg:pt-64 lg:pb-20 my-14 bg-indigo-500 advantage-container">
+    <div className="px-5 md:px-10 lg:px-40 pt-32 pb-10 md:pb-10 md:pt-64 lg:pt-64 lg:pb-20 my-14 bg-indigo-500 advantage-container">
       <h1 className="w-3/4 lg:w-full font-medium text-white text-2xl md:text-3xl lg:text-4xl mb-4">
         Top universities in Australia
       </h1>

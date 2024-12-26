@@ -3,11 +3,11 @@ import referImg from "../assets/refer.png";
 
 const ReferAndEarn = () => {
   return (
-    <div className="px-5 md:px-10 lg:px-20 py-10 mb-10">
+    <div className="px-5 md:px-10 lg:px-40 py-10 mb-10">
       <div className="flex flex-col lg:flex-row items-center justify-between bg-indigo-100 p-5 lg:px-20 lg:py-10 rounded-2xl">
         <div className="space-y-6">
           <h1 className="text-3xl font-medium text-slate-900">Refer & Earn</h1>
-          <p className=" text-slate-600">
+          <p className=" text-slate-600 w-3/4">
             We provide exceptional support and resources to make your study
             abroad journey smooth and successful.
           </p>

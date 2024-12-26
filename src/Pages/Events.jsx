@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import img2 from "../assets/Image2.png";
 import img3 from "../assets/Image3.png";
+import { ArrowRight01Icon } from "hugeicons-react";
 
 const Events = () => {
   const incident = [
@@ -82,7 +83,7 @@ const Events = () => {
   };
 
   return (
-    <div className="px-5 md:px-10 lg:px-20 py-10 mb-10">
+    <div className="px-5 md:px-10 lg:px-40 py-10 mb-10">
       <h1 className="font-Poppins font-medium text-[#0F172A] text-2xl md:text-3xl lg:text-4xl mb-4">
         Events
       </h1>
@@ -131,10 +132,10 @@ const Events = () => {
       <div className="relative mt-10 ">
         <Slider {...settings}>
           {incident.map((event, index) => (
-            <div key={index} className=" pr-9">
-              <div className="shadow-md">
+            <div key={index} className="pr-9 ">
+              <div className="rounded-xl">
                 <div className="mb-4">
-                  <img className="w-full" src={event.image} alt="" />
+                  <img className="w-full rounded-xl" src={event.image} alt="" />
                 </div>
                 <div className="p-2">
                   <h3 className="text-[#0F172A] font-Poppins text-xl mb-3">
@@ -148,10 +149,13 @@ const Events = () => {
                     {event.description}
                   </p>
                   <div className="flex items-center gap-2 mb-3">
-                    <a href="#" className="text-indigo-500 font-medium">
+                    {/* <a href="#" className="text-indigo-500 font-medium">
                       Learn More{" "}
                     </a>
-                    <img src={arrow} alt="" />
+                    <p className="text-indigo-500">
+                      {" "}
+                      <ArrowRight01Icon />{" "}
+                    </p> */}
                   </div>
                 </div>
               </div>

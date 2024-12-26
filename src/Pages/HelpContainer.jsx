@@ -14,11 +14,11 @@ function HelpContainer() {
   };
 
   return (
-    <div className="px-5 md:px-10 lg:px-20 py-5 md:py-10 lg:py-20">
+    <div className="px-5 md:px-10 lg:px-40 py-5 md:py-10 lg:py-20">
       {/* Header Section */}
       <div className="mb-10">
         <h1 className="font-Poppins font-medium text-2xl md:text-3xl lg:text-4xl mb-4">
-          Nexfly can help you
+          <span className="font-bold text-indigo-500">nexFly</span> can help you
         </h1>
         <p className="text-md lg:text-lg text-[#334155] lg:w-1/2">
           Provide your details, and our expert counselors will reach out to
@@ -27,9 +27,7 @@ function HelpContainer() {
         </p>
       </div>
 
-      {/* Content Section */}
-      <div className="flex flex-col lg:flex-row items-stretch gap-4 mb-10">
-        {/* Image Animation: Slide from Left on Scroll */}
+      <div className="flex flex-col lg:flex-row gap-16 mb-10">
         <motion.div
           initial={{ x: -80, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -57,8 +55,8 @@ function HelpContainer() {
             className="w-full font-Manrope space-y-6"
           >
             {/* Name Fields */}
-            <div className="flex flex-col md:flex-row items-center gap-4">
-              <div className="flex-1">
+            <div className="flex flex-col lg:flex-row items-center gap-4">
+              <div className="flex-1 w-full">
                 <input
                   {...register("firstName", {
                     required: "First Name is required",
@@ -78,7 +76,7 @@ function HelpContainer() {
                 )}
               </div>
 
-              <div className="flex-1">
+              <div className="flex-1 w-full">
                 <input
                   {...register("lastName", {
                     required: "Last Name is required",
@@ -120,7 +118,7 @@ function HelpContainer() {
 
             {/* Mobile Fields */}
             <div className="flex flex-col md:flex-row items-center gap-4">
-              <div className="flex-1">
+              <div className="flex-1 w-full">
                 <input
                   {...register("number", {
                     required: "Phone number is required",
@@ -143,7 +141,7 @@ function HelpContainer() {
                   </p>
                 )}
               </div>
-              <div className="flex-1">
+              <div className="flex-1 w-full">
                 <input
                   {...register("parentNumber", {
                     required: "Parent Phone number is required",
@@ -203,7 +201,7 @@ function HelpContainer() {
 
             {/* Study Level and Location */}
             <div className="flex flex-col md:flex-row items-center gap-4">
-              <div className="flex-1">
+              <div className="flex-1 w-full">
                 <input
                   {...register("studyLevel", {
                     required: "Study level is required",
@@ -220,7 +218,7 @@ function HelpContainer() {
                 </datalist>
               </div>
 
-              <div className="flex-1">
+              <div className="flex-1 w-full">
                 <input
                   {...register("location", {
                     required: "Location is required",

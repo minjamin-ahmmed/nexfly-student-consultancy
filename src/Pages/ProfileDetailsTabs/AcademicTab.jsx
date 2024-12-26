@@ -36,7 +36,7 @@ const AcademicTab = ({ handleNext, handlePrev }) => {
   };
 
   return (
-    <div>
+    <div className="overflow-y-scroll h-[550px]">
       {" "}
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-medium text-center mb-4">
         Academic and career goals
@@ -124,48 +124,118 @@ const AcademicTab = ({ handleNext, handlePrev }) => {
           ))}
         </div>
       </div>
-      <form className="w-full space-y-8 mt-10">
-        {/* <input
-              type="text"
-              placeholder="What interests you?"
-              className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
-              list="funding-options"
-              required
+      <form className="w-full space-y-4 mt-10">
+        <h3 className="text-lg font-medium text-slate-900">
+          SSC or Equivalanet Degree
+        </h3>
+        <div className="flex flex-col lg:flex-row items-center gap-4">
+          <input
+            type="number"
+            placeholder="Passing Year"
+            className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
+            list="funding-options"
+            required
           />
-          <datalist id="funding-options">
-              <option>Engineering</option>
-              <option>Business and Management</option>
-              <option>Medicine</option>
-              <option>IT and Computer Science</option>
-          </datalist>
+          <input
+            type="number"
+            placeholder="Result"
+            className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
+            list="funding-options"
+            required
+          />
 
           <input
-              type="text"
-              placeholder="At what stage do you want to study abroad?"
-              className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
-              list="funding-options"
-              required
+            type="text"
+            placeholder="Institution Name"
+            className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
+            list="funding-options"
+            required
           />
-          <datalist id="funding-options">
-              <option>Bachelor program</option>
-              <option>Master&apos;s program</option>
-              <option>Ph.D./Research</option>
-              <option>Certificate or Short Course</option>
-          </datalist>
+        </div>
 
+        <h3 className="text-lg font-medium text-slate-900 mt-6">
+          HSC or Equivalent Degree
+        </h3>
+        <div className="flex flex-col lg:flex-row items-center gap-4">
+          <input
+            type="number"
+            placeholder="Passing Year"
+            className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
+            list="funding-options"
+            required
+          />
+          <input
+            type="number"
+            placeholder="Result"
+            className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
+            list="funding-options"
+            required
+          />
 
           <input
-              type="text"
-              placeholder="What are your future career goals?"
-              className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
-              list="funding-options"
-              required
+            type="text"
+            placeholder="Institution Name"
+            className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
+            list="funding-options"
+            required
           />
-          <datalist id="funding-options">
-              <option>Employed (salary focus on higher ranges)</option>
-              <option>Being an entrepreneur</option>
-              <option>Research and Academic Field</option>
-          </datalist> */}
+        </div>
+
+        <h3 className="text-lg font-medium text-slate-900 mt-6">
+          BSC or Equivalent Degree
+        </h3>
+        <div className="flex flex-col lg:flex-row items-center gap-4">
+          <input
+            type="number"
+            placeholder="Passing Year"
+            className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
+            list="funding-options"
+            required
+          />
+          <input
+            type="number"
+            placeholder="Result"
+            className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
+            list="funding-options"
+            required
+          />
+
+          <input
+            type="text"
+            placeholder="Institution Name"
+            className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
+            list="funding-options"
+            required
+          />
+        </div>
+
+        <h3 className="text-lg font-medium text-slate-900 mt-6">
+          MSC or Equivalent Degree
+        </h3>
+        <div className="flex flex-col lg:flex-row items-center gap-4">
+          <input
+            type="number"
+            placeholder="Passing Year"
+            className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
+            list="funding-options"
+            required
+          />
+          <input
+            type="number"
+            placeholder="Result"
+            className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
+            list="funding-options"
+            required
+          />
+
+          <input
+            type="text"
+            placeholder="Institution Name"
+            className="input input-bordered w-full border border-[#CBD5E1] placeholder-slate-700 font-medium"
+            list="funding-options"
+            required
+          />
+        </div>
 
         {/* Buttons */}
         <div className="flex items-center gap-4 w-full max-w-2xl">

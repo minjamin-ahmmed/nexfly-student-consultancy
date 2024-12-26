@@ -5,7 +5,7 @@ const Earn = () => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "right",
       }}
-      className="px-5 md:px-10 lg:px-20 my-14 bg-indigo-500 advantage-container"
+      className="px-5 md:px-10 lg:px-40 my-14 bg-indigo-500 advantage-container"
     >
       <div className="pt-40 pb-16">
         <h1 className="font-Poppins font-medium text-white text-2xl md:text-3xl lg:text-4xl mb-4">

@@ -91,7 +91,7 @@ const Reason = () => {
         </div>
       </div>
 
-      <div className="px-5 md:px-10 lg:px-20 py-5">
+      <div className="px-5 md:px-10 lg:px-40 py-5">
         <h1 className="text-2xl lg:text-4xl text-slate-900 font-medium mb-4">
           Benifits
         </h1>

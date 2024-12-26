@@ -15,6 +15,7 @@ import cross from "../assets/clear.svg";
 import { useEffect } from "react";
 import { useState } from "react";
 import ReferAndEarn from "../Pages/ReferAndEarn";
+import { ChatBotIcon } from "hugeicons-react";
 
 Modal.setAppElement("#root");
 
@@ -111,6 +112,12 @@ const Home = () => {
           </div>
         </div>
       </Modal>
+
+      <div className="fixed bottom-12 right-8 z-50 flex items-center justify-center bg-gradient-to-r from-indigo-800 to-blue-900  text-white p-3 rounded-full shadow-lg cursor-pointer hover:bg-indigo-700">
+        <span className="text-2xl">
+          <ChatBotIcon />{" "}
+        </span>
+      </div>
 
       <Banner />
       <HelpContainer />

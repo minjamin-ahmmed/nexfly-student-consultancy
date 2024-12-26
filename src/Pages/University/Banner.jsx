@@ -2,7 +2,7 @@ import australiaImg from "../../assets/Australia2.png";
 
 const Banner = () => {
   return (
-    <div className="p-5 md:p-10 lg:px-20 lg:py-4 bg-indigo-500">
+    <div className="p-5 md:p-10 lg:px-40 lg:py-4 bg-indigo-500">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-5">
         <div className="space-y-4">
           <h1 className="font-medium text-2xl lg:text-4xl text-white">

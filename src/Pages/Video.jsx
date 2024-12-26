@@ -71,7 +71,7 @@ const Video = () => {
   };
 
   return (
-    <div className="px-5 md:px-10 lg:px-20 py-5 md:py-10 lg:py-20">
+    <div className="px-5 md:px-10 lg:px-40 py-5 md:py-10 lg:py-20">
       <h1 className="font-Poppins font-medium text-[#0F172A] text-2xl md:text-3xl lg:text-4xl mb-4">
         Video
       </h1>

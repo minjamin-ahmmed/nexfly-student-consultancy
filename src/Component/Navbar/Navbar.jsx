@@ -1,7 +1,22 @@
 import { MdOutlineArrowOutward } from "react-icons/md";
+import { ArrowRight01Icon } from "hugeicons-react";
 import logo from "../../assets/Color Logo.png";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import useStore from "../../store/store";
+import usaFlag from "../../assets/United States flag.png";
+import finland from "../../assets/Finland flag.png";
+import canada from "../../assets/canada.png";
+import pearland from "../../assets/pearland.png";
+import uk from "../../assets/uk.png";
+import sweden from "../../assets/sweden.png";
+import germany from "../../assets/germany.png";
+import norway from "../../assets/norway.png";
+import denmark from "../../assets/denmark.png";
+import spain from "../../assets/spain.png";
+import service1 from "../../assets/service1.png";
+import service2 from "../../assets/service2.png";
+import service3 from "../../assets/service3.png";
+import service4 from "../../assets/service4.png";
 
 const Navbar = () => {
   const currentUser = useStore((state) => state.currentUser); // Read-only access to Zustand state
@@ -24,14 +39,14 @@ const Navbar = () => {
       : "bg-[url('/src/assets/background-gradiant.png')] bg-no-repeat bg-cover bg-top";
 
   // style={{
-  //     backgroundImage: `url(${bannerBG})`,
+  //     backgroundImage: url(${bannerBG}),
   //     backgroundPosition: "top",
   //     backgroundRepeat: "no-repeat",
   //     backgroundSize: "cover"
   // }}
 
   return (
-    <div className={`navbar px-5 md:px-10 lg:px-20 ${navbarBgColor}`}>
+    <div className={`navbar px-5 md:px-10 lg:px-40 ${navbarBgColor}`}>
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -63,13 +78,90 @@ const Navbar = () => {
             <li>
               <details>
                 <summary>Destination</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
+                <ul className="dropdown-content menu bg-base-100 rounded-box z-[1] w-[400px] p-4 shadow">
+                  <h3 className="text-slate-900 font-medium text-xl">
+                    Country
+                  </h3>
+                  <div className="grid grid-cols-2 gap-8 mt-6">
+                    <div className="flex items-center gap-2">
+                      <img src={usaFlag} alt="" />
+                      <p className="text-slate-700 font-medium text-lg">
+                        United States
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <img src={finland} alt="" />
+                      <p className="text-slate-700 font-medium text-lg">
+                        Finland
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <img
+                        className="w-10 h-10 rounded-md"
+                        src={canada}
+                        alt=""
+                      />
+                      <p className="text-slate-700 font-medium text-lg">
+                        Canada
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <img src={pearland} alt="" />
+                      <p className="text-slate-700 font-medium text-lg">
+                        Pearland
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <img src={uk} alt="" />
+                      <p className="text-slate-700 font-medium text-lg">UK</p>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <img src={sweden} alt="" />
+                      <p className="text-slate-700 font-medium text-lg">
+                        Sweden
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <img src={germany} alt="" />
+                      <p className="text-slate-700 font-medium text-lg">
+                        Germany
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <img src={norway} alt="" />
+                      <p className="text-slate-700 font-medium text-lg">
+                        Norway
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <img src={denmark} alt="" />
+                      <p className="text-slate-700 font-medium text-lg">
+                        Denmark
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <img src={spain} alt="" />
+                      <p className="text-slate-700 font-medium text-lg">
+                        Spain
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-center my-6">
+                    <p className="text-indigo-500 font-medium text-lg">More</p>
+                    <p className="text-indigo-500 font-medium text-lg">
+                      <ArrowRight01Icon />
+                    </p>
+                  </div>
                 </ul>
               </details>
             </li>
@@ -77,13 +169,61 @@ const Navbar = () => {
             <li>
               <details>
                 <summary>Service</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
+                <ul className="dropdown-content menu bg-base-100 rounded-box z-[1] w-[404px] h-[520px] p-4 shadow">
+                  <h3 className="text-slate-900 font-medium text-xl">
+                    Services
+                  </h3>
+                  <div className="grid grid-cols-2 gap-8 mt-6">
+                    <div className="bg-indigo-50 p-2 rounded-xl">
+                      <div>
+                        <img
+                          className="w-full object-cover"
+                          src={service1}
+                          alt=""
+                        />
+                      </div>
+                      <h4 className="text-slate-900 font-medium mt-2">
+                        Education Consaltant
+                      </h4>
+                    </div>
+
+                    <div className="bg-indigo-50 p-4 rounded-xl">
+                      <div>
+                        <img
+                          className="w-full object-cover"
+                          src={service2}
+                          alt=""
+                        />
+                      </div>
+                      <h4 className="text-slate-900 font-medium mt-2">
+                        Travel Support
+                      </h4>
+                    </div>
+
+                    <div className="bg-indigo-50 p-4 rounded-xl">
+                      <div>
+                        <img
+                          className="w-full object-cover"
+                          src={service3}
+                          alt=""
+                        />
+                      </div>
+                      <h4 className="w-full object-cover">Financial Support</h4>
+                    </div>
+
+                    <div className="bg-indigo-50 p-4 rounded-xl">
+                      <div>
+                        <img
+                          className="w-full object-cover"
+                          src={service4}
+                          alt=""
+                        />
+                      </div>
+                      <h4 className="text-slate-900 font-medium mt-2">
+                        Language Training
+                      </h4>
+                    </div>
+                  </div>
                 </ul>
               </details>
             </li>
@@ -111,13 +251,76 @@ const Navbar = () => {
           <li>
             <details>
               <summary>Destination</summary>
-              <ul className="p-2 z-10">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
+              <ul className="dropdown-content menu bg-base-100 rounded-box z-[1] w-[400px] p-4 shadow">
+                <h3 className="text-slate-900 font-medium text-xl">Country</h3>
+                <div className="grid grid-cols-2 gap-8 mt-6">
+                  <div className="flex items-center gap-2">
+                    <img src={usaFlag} alt="" />
+                    <p className="text-slate-700 font-medium text-lg">
+                      United States
+                    </p>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <img src={finland} alt="" />
+                    <p className="text-slate-700 font-medium text-lg">
+                      Finland
+                    </p>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <img className="w-10 h-10 rounded-md" src={canada} alt="" />
+                    <p className="text-slate-700 font-medium text-lg">Canada</p>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <img src={pearland} alt="" />
+                    <p className="text-slate-700 font-medium text-lg">
+                      Pearland
+                    </p>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <img src={uk} alt="" />
+                    <p className="text-slate-700 font-medium text-lg">UK</p>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <img src={sweden} alt="" />
+                    <p className="text-slate-700 font-medium text-lg">Sweden</p>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <img src={germany} alt="" />
+                    <p className="text-slate-700 font-medium text-lg">
+                      Germany
+                    </p>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <img src={norway} alt="" />
+                    <p className="text-slate-700 font-medium text-lg">Norway</p>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <img src={denmark} alt="" />
+                    <p className="text-slate-700 font-medium text-lg">
+                      Denmark
+                    </p>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <img src={spain} alt="" />
+                    <p className="text-slate-700 font-medium text-lg">Spain</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-center my-6">
+                  <p className="text-indigo-500 font-medium text-lg">More</p>
+                  <p className="text-indigo-500 font-medium text-lg">
+                    <ArrowRight01Icon />
+                  </p>
+                </div>
               </ul>
             </details>
           </li>
@@ -125,13 +328,59 @@ const Navbar = () => {
           <li>
             <details>
               <summary>Service</summary>
-              <ul className="p-2 z-10">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
+              <ul className="dropdown-content menu bg-base-100 rounded-box z-[1] w-[404px] h-[520px] p-4 shadow">
+                <h3 className="text-slate-900 font-medium text-xl">Services</h3>
+                <div className="grid grid-cols-2 gap-8 mt-6">
+                  <div className="bg-indigo-50 p-2 rounded-xl">
+                    <div>
+                      <img
+                        className="w-full object-cover"
+                        src={service1}
+                        alt=""
+                      />
+                    </div>
+                    <h4 className="text-slate-900 font-medium mt-2">
+                      Education Consaltant
+                    </h4>
+                  </div>
+
+                  <div className="bg-indigo-50 p-4 rounded-xl">
+                    <div>
+                      <img
+                        className="w-full object-cover"
+                        src={service2}
+                        alt=""
+                      />
+                    </div>
+                    <h4 className="text-slate-900 font-medium mt-2">
+                      Travel Support
+                    </h4>
+                  </div>
+
+                  <div className="bg-indigo-50 p-4 rounded-xl">
+                    <div>
+                      <img
+                        className="w-full object-cover"
+                        src={service3}
+                        alt=""
+                      />
+                    </div>
+                    <h4 className="w-full object-cover">Financial Support</h4>
+                  </div>
+
+                  <div className="bg-indigo-50 p-4 rounded-xl">
+                    <div>
+                      <img
+                        className="w-full object-cover"
+                        src={service4}
+                        alt=""
+                      />
+                    </div>
+                    <h4 className="text-slate-900 font-medium mt-2">
+                      Language Training
+                    </h4>
+                  </div>
+                </div>
               </ul>
             </details>
           </li>
@@ -161,14 +410,12 @@ const Navbar = () => {
           </div>
         ) : (
           <>
-            {/* Sign Up Button */}
             <Link to="/auth/signup">
-              <button className="bg-transparent border border-indigo-500 px-3 py-1 text-sm rounded-full lg:px-5 lg:py-2 lg:text-md">
+              <button className="text-slate-700 text-[16px] font-normal">
                 Sign Up
               </button>
             </Link>
 
-            {/* Sign In Button */}
             <Link to="/auth/signin">
               <div className="flex items-center justify-between gap-2 border border-indigo-500 pl-5 pr-1 py-1 rounded-full lg:gap-4">
                 <button className="text-indigo-500 text-sm lg:text-md">

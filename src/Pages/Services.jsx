@@ -2,13 +2,12 @@ import icon1 from "../assets/icon1.svg";
 import icon2 from "../assets/Icon2.svg";
 import icon3 from "../assets/icon3.svg";
 import icon4 from "../assets/Icon4.svg";
-import elementIcon from "../assets/elements.svg";
 
 import { motion } from "framer-motion";
 import { ArrowRight01Icon } from "hugeicons-react";
 const Services = () => {
   return (
-    <div className="px-5 md:px-10 lg:px-20 py-5 md:py-10 lg:pb-20">
+    <div className="px-5 md:px-10 lg:px-40 py-5 md:py-10 lg:pb-20">
       <h1 className="font-Poppins font-medium text-2xl md:text-3xl lg:text-4xl mb-4">
         Services
       </h1>
@@ -34,12 +33,12 @@ const Services = () => {
             We provide exceptional support and resources to make your study
             abroad journey smooth and successful.
           </p>
-          <div className="flex items-center gap-2">
+          {/* <div className="flex items-center gap-2">
             <a href="#" className="text-indigo-500 font-medium">
               Learn More
             </a>
             <ArrowRight01Icon className="text-indigo-500" />
-          </div>
+          </div> */}
         </motion.div>
 
         <motion.div
@@ -58,12 +57,12 @@ const Services = () => {
             We provide exceptional support and resources to make your study
             abroad journey smooth and successful.
           </p>
-          <div className="flex items-center gap-2">
+          {/* <div className="flex items-center gap-2">
             <a href="#" className="text-indigo-500 font-medium">
               Learn More
             </a>
             <ArrowRight01Icon className="text-indigo-500" />
-          </div>
+          </div> */}
         </motion.div>
 
         <motion.div
@@ -82,12 +81,12 @@ const Services = () => {
             We provide exceptional support and resources to make your study
             abroad journey smooth and successful.
           </p>
-          <div className="flex items-center gap-2">
+          {/* <div className="flex items-center gap-2">
             <a href="#" className="text-indigo-500 font-medium">
               Learn More
             </a>
             <ArrowRight01Icon className="text-indigo-500" />
-          </div>
+          </div> */}
         </motion.div>
 
         <motion.div
@@ -106,12 +105,12 @@ const Services = () => {
             We provide exceptional support and resources to make your study
             abroad journey smooth and successful.
           </p>
-          <div className="flex items-center gap-2">
+          {/* <div className="flex items-center gap-2">
             <a href="#" className="text-indigo-500 font-medium">
               Learn More
             </a>
             <ArrowRight01Icon className="text-indigo-500" />
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </div>
